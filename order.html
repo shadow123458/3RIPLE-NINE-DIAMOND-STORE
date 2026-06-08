@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Now | 3RIPLE NINE Diamond Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<section class="order-page">
+
+<div class="order-container">
+
+<div class="order-header">
+
+<h1>Place Your Order</h1>
+
+<p>
+Fast • Secure • Trusted
+</p>
+
+</div>
+
+<form class="order-form" id="orderForm">
+
+<div class="form-group">
+
+<label>Free Fire UID</label>
+
+<input type="number"
+placeholder="Enter UID"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Player Nickname</label>
+
+<input type="text"
+placeholder="Enter Nickname"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Select Category</label>
+
+<select required>
+
+<option value="">
+Choose Category
+</option>
+
+<option>
+Diamond Top-Up
+</option>
+
+<option>
+Membership
+</option>
+
+<option>
+Evo Access
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Select Product</label>
+
+<select required>
+
+<option>
+25 Diamonds - LKR 100
+</option>
+
+<option>
+50 Diamonds - LKR 200
+</option>
+
+<option>
+100 Diamonds - LKR 350
+</option>
+
+<option>
+200 Diamonds - LKR 670
+</option>
+
+<option>
+310 Diamonds - LKR 1100
+</option>
+
+<option>
+400 Diamonds - LKR 1400
+</option>
+
+<option>
+520 Diamonds - LKR 1750
+</option>
+
+<option>
+1060 Diamonds - LKR 3400
+</option>
+
+<option>
+1580 Diamonds - LKR 4940
+</option>
+
+<option>
+2180 Diamonds - LKR 6600
+</option>
+
+<option>
+4360 Diamonds - LKR 11950
+</option>
+
+<option>
+5600 Diamonds - LKR 16300
+</option>
+
+<option>
+Weekly Lite - LKR 160
+</option>
+
+<option>
+Weekly Membership - LKR 580
+</option>
+
+<option>
+Monthly Membership - LKR 2850
+</option>
+
+<option>
+VIP Membership - LKR 3430
+</option>
+
+<option>
+Super VIP - LKR 5170
+</option>
+
+<option>
+3 Day Evo Access - LKR 220
+</option>
+
+<option>
+7 Day Evo Access - LKR 330
+</option>
+
+<option>
+30 Day Evo Access - LKR 890
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Payment Method</label>
+
+<select required>
+
+<option>
+eZ Cash
+</option>
+
+<option>
+Bank Transfer
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Upload Payment Screenshot</label>
+
+<input type="file"
+accept="image/*">
+
+</div>
+
+<div class="form-group">
+
+<label>Additional Notes</label>
+
+<textarea
+rows="4"
+placeholder="Optional message">
+</textarea>
+
+</div>
+
+<button type="submit"
+class="submit-order">
+
+Place Order
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const uid =
+    document.querySelector('input[placeholder="Enter UID"]').value;
+
+    const nickname =
+    document.querySelector('input[placeholder="Enter Nickname"]').value;
+
+    const selects =
+    document.querySelectorAll("select");
+
+    const product = selects[1].value;
+    const payment = selects[2].value;
+
+    const message =
+`🎮 3RIPLE NINE DIAMOND STORE
+
+👤 Player: ${nickname}
+
+🆔 UID: ${uid}
+
+💎 Product: ${product}
+
+💳 Payment: ${payment}`;
+
+    const whatsapp =
+    "https://wa.me/94773169055?text=" +
+    encodeURIComponent(message);
+
+    window.open(whatsapp, "_blank");
+
+});
+</script>
+</body>
+
+</html>
